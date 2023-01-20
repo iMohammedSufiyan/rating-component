@@ -3,7 +3,7 @@ import StarLogo from "./StarLogo";
 
 import RatingForm from "./RatingForm";
 
-export default function FeedbackPage() {
+export default function FeedbackPage(props) {
   return (
     <div className="content">
       <StarLogo />
@@ -14,7 +14,7 @@ export default function FeedbackPage() {
           appreciated to help us improve our offering!
         </p>
       </div>
-      <RatingForm />
+      <RatingForm showThankyou={props.showThankyou} />
     </div>
   );
 }

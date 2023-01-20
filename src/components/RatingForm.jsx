@@ -2,19 +2,23 @@ import React, { useState } from "react";
 import RatingButton from "./RatingButton";
 import SubmitButton from "./SubmitButton";
 
-export default function RatingForm() {
-  const [state, setState] = useState(0);
-  function selectRating(event){
-    console.log(event.target.value);
-    setState(event.target.value);
-  }
-  function handleEvent(event){
+export default function RatingForm(props) {
+  const [rating, setRating] = useState(0);
+
+  function submitRating(event) {
     event.preventDefault();
-    console.log(event.target);
+    console.log(rating);
+    if (rating === 0) alert("Please select rating.");
+    else props.showThankyou();
   }
+
+  function selectRating(event) {
+    setRating(event.target.value);
+  }
+
   return (
-    <form onSubmit={handleEvent} className="rating-form">
-      <RatingButton met={selectRating} />
+    <form onSubmit={submitRating} className="rating-form">
+      <RatingButton selectRating={selectRating} />
       <SubmitButton />
     </form>
   );

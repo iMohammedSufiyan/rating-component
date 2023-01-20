@@ -95,3 +95,38 @@ body {
 .container .rating-form .submit:focus {
   box-shadow: none;
 }
+
+.container .thankyou-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.container .selected-rating {
+  width: 30vh;
+  display: flex;
+  justify-content: center;
+  background-color: hsl(213, 19%, 18%);
+  color: hsl(25, 97%, 53%);
+  margin: 4vh auto; 
+  border-radius: 3vh;
+}
+
+.container .selected-rating p {
+  margin: 0.5rem auto 0.2rem;
+  font-size: 1.1em;
+  align-self: center;
+}
+
+.container .thankyou {
+  text-align: center;
+}
+
+.container .thankyou h1 {
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+
+.container .thankyou p {
+  font-size: 15px;
+  color: hsl(216, 12%, 54%);
+}

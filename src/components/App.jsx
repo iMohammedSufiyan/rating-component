@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import FeedbackPage from "./FeedbackPage"; 
-import ThankYouPage from "./ThankYouPage";
+import Thankyou from "./Thankyou";
 
 function App() {
+  const [state, setState] = useState(true);
   return (
     <div className="container-fluid">
       <div className="container">
-        <FeedbackPage />
+        {state ? <FeedbackPage showThankyou={setState} /> : <Thankyou />}
       </div>
     </div>
   );
