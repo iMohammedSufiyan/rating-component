@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Thankyou() {
+export default function Thankyou(props) {
   return (
     <div>
       <div className="thankyou-logo">
@@ -9,7 +9,7 @@ export default function Thankyou() {
         />
       </div>
       <div className="selected-rating">
-        <p>You selected 4 out of 5</p>
+        <p>You selected {props.rating} out of 5</p>
       </div>
       <div className="thankyou">
         <h1>Thank you!</h1>

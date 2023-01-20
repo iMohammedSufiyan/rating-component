@@ -9,7 +9,7 @@ export default function RatingForm(props) {
     event.preventDefault();
     console.log(rating);
     if (rating === 0) alert("Please select rating.");
-    else props.showThankyou();
+    else props.showThankyou(rating);
   }
 
   function selectRating(event) {
